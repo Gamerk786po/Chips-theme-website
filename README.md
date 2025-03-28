@@ -12,9 +12,9 @@ This is a chips-themed website designed to showcase various types of chips with 
 
 🍟 Product Showcase: Display different chip varieties with detailed descriptions.
 
-💬 User Interaction: Possible features like ratings, reviews, or interactive elements.
 
-⚡ Optimized Performance: Ensuring fast load times and smooth navigation.
+
+
 
 🛠️ Tech Stack
 
