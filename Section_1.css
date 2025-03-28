@@ -1,0 +1,235 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+/* Background page */
+body {
+  background-image: url(Chips_background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+/* Header */
+header {
+  background-color: #005b96;
+  height: auto;
+  margin-top: 1%;
+  margin-right: 1%;
+  margin-left: 1%;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-evenly;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: slideDown 2s ease-out forwards;
+  padding: 10px 0;
+}
+/* Logo */
+#logo {
+  height: 15vmin;
+  width: 15vmin;
+  border-radius: 50%;
+  border: rgba(255, 255, 255, 0.534) 5px solid;
+  background-image: url(Chips.png.png);
+  background-size: cover;
+  background-position: center;
+}
+/* Nav bar */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav ul li {
+  margin-right: 8vmin;
+  margin-top: 4vmin;
+}
+nav ul li a {
+  font-size: 4vmin;
+  color: black;
+  text-decoration: none;
+  transition: font-size 0.5s ease;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+  font-size: 5vmin;
+  transition: font-size 0.5s ease;
+}
+/*  tab Responsivnes */
+@media (max-width: 484px) {
+  nav ul li a:hover {
+    text-decoration: none;
+  }
+  /* Mobile Responsiveness */
+  @media (max-width: 700px) {
+    header {
+      flex-direction: row;
+      padding: 10px 5px;
+    }
+    nav ul {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    nav ul li {
+      margin-right: 8vmin;
+      margin-top: 4vmin;
+    }
+    nav ul li a {
+      font-size: 3vmin;
+    }
+    #logo {
+      height: 12vmin;
+      width: 12vmin;
+    }
+  }
+}
+/* Main area */
+#main_area {
+  margin-top: 2%;
+  margin-right: 4%;
+  margin-left: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+/* Section_1 */
+#section_1 {
+  width: 100%;
+  background-color: #fdcb58ec;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 2%;
+  padding: 20px;
+  margin-top: 1em;
+  animation: fadeIn 2s ease-in forwards;
+}
+#pointing_man {
+  height: auto;
+  width: 70vmin;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+}
+#text_1 {
+  max-width: 45%;
+  line-height: 1.8;
+  font-size: 1.2em;
+  text-align: justify;
+  font-family: sans-serif;
+  position: relative;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+}
+#text_1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(chips-background-text-img.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  border-radius: 5px;
+  z-index: -1;
+}
+/*  Responsiveness for tab */
+@media (max-width: 768px) {
+  #text_1 {
+    max-width: 90%;
+    font-size: 1em;
+  }
+  /* L Mobile Responsiveness for Section_1 */
+  @media (max-width: 484px) {
+    #section_1 {
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+    }
+
+    #text_1 {
+      max-width: 90%;
+      font-size: 1em;
+    }
+
+    #pointing_man {
+      width: 0;
+      height: 0;
+    }
+  }
+  /* Responsiveness for M and S mobiles */
+  @media (max-width: 375px) {
+    #section_1 {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+
+    #text_1 {
+      max-width: 90%;
+      font-size: 0.8em;
+      background-size: 100%;
+      opacity: 0.9;
+      padding: 10px;
+      line-height: 1.4;
+    }
+
+    #text_1::before {
+      opacity: 0.5;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    #pointing_man {
+      display: none;
+    }
+  }
+}
+/* Responsiness for */
+@media (max-width: 700px), (min-width: 485) {
+  #section_1 {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    height: auto;
+  }
+
+  #text_1 {
+    max-width: 90%;
+    font-size: 1.3em;
+  }
+
+  #pointing_man {
+    width: 0;
+    height: 0;
+  }
+}
+/* Animations */
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
